@@ -35,3 +35,10 @@ export interface GetQuestionsResponse {
 export interface PostAnswersResponse {
   [questionId: string]: string;
 }
+
+export interface Lesson {
+  name: string;
+  icon: string;
+  id: string;
+  uri: string;
+}

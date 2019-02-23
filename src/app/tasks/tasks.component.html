@@ -1,0 +1,14 @@
+<mat-card>
+  <p>
+    Next steps:
+  </p>
+  <div *ngFor="let task of tasks">
+    <div class="items">
+      <mat-icon *ngIf="task.done" style="color: green">check_circle</mat-icon>
+      <mat-icon *ngIf="!task.done" style="color: gray">
+        check_circle_outline
+      </mat-icon>
+      {{ task.name }}
+    </div>
+  </div>
+</mat-card>

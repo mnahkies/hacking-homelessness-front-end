@@ -1,0 +1,16 @@
+.mat-icon .checkDone {
+  color: green;
+}
+
+.mat-icon .uncheckDone {
+  color: gray;
+}
+
+.mat-icon {
+  padding-right: 5px;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+}
