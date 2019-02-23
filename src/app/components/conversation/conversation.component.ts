@@ -52,7 +52,7 @@ export class ConversationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.goToQuestion(this.conversationScript.firstQuestionId);
+    this.reset();
   }
 
   selectAnswer(answer: Answer, question: MultiChoiceQuestion) {
@@ -102,5 +102,9 @@ export class ConversationComponent implements OnInit {
       content: response,
       position: 'right',
     });
+  }
+
+  reset() {
+    this.goToQuestion(this.conversationScript.firstQuestionId);
   }
 }

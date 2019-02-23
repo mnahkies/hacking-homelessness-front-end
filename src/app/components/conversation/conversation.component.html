@@ -2,50 +2,53 @@
   <div *ngFor="let message of history" class="message" [ngClass]="message.position">
     <span>{{message.content}}</span>
   </div>
+  <br>
 </div>
 
-<div style="display: flex" *ngIf="currentAnswers.length">
+<div class="bottom-tray">
+  <ng-container *ngIf="currentQuestion; else continueButton">
+    <div class="response-input" style="display: flex" *ngIf="currentAnswers.length; else freeFormInput">
+      <span style="flex: 1 1"></span>
 
-  <span style="flex: 1 1"></span>
+      <mat-chip-list>
 
-  <mat-chip-list class="mat-chip-list-stacked" aria-orientation="vertical">
+        <mat-chip *ngFor="let answer of currentAnswers"
+                  (click)="selectAnswer(answer, currentQuestion)">
+          {{answer.text}}
+        </mat-chip>
 
-    <mat-chip *ngFor="let answer of currentAnswers"
-              (click)="selectAnswer(answer, currentQuestion)">
-      {{answer.text}}
-    </mat-chip>
+      </mat-chip-list>
 
-  </mat-chip-list>
+      <span style="flex: 1 1"></span>
+    </div>
 
-  <span style="flex: 1 1"></span>
-
-</div>
-
-<br>
-
-<form #responseForm="ngForm"
-      *ngIf="currentQuestion; else continueButton"
-      (ngSubmit)="submitResponse(responseInput, currentQuestion)">
-
-  <mat-form-field class="response-input">
+    <ng-template #freeFormInput>
+      <form #responseForm="ngForm"
+            (ngSubmit)="submitResponse(responseInput, currentQuestion)">
+        <div class="response-input">
+          <mat-form-field>
     <textarea #responseInput
               [disabled]="!!currentAnswers.length"
               cdkTextareaAutosize
               cdkFocusInitial
               (keydown.enter)="responseForm.ngSubmit.emit(); $event.preventDefault()"
               matInput name="response"></textarea>
-  </mat-form-field>
-</form>
+          </mat-form-field>
+        </div>
+      </form>
+    </ng-template>
 
-<ng-template #continueButton>
-  <button mat-button class="mat-raised-button">
-    Continue
-  </button>
-</ng-template>
+  </ng-container>
 
-<!--
-
-PUT /lessons/:lessonId/completion
-DELETE
-
--->
+  <ng-template #continueButton>
+    <div>
+      <button mat-button class="mat-raised-button">
+        Continue
+      </button>
+      <span class="spacer"></span>
+      <button mat-button class="mat-raised-button" (click)="reset()">
+        Reset
+      </button>
+    </div>
+  </ng-template>
+</div>

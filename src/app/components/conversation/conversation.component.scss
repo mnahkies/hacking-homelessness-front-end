@@ -1,11 +1,6 @@
 $question-background-color: red;
 $response-background-color: #1E90FF;
 
-:host {
-  display: block;
-  padding: 1em
-}
-
 .message {
   display: flex;
   flex-direction: row;
@@ -34,19 +29,21 @@ $response-background-color: #1E90FF;
   }
 }
 
+.bottom-tray {
+  position: fixed;
+  width: 100%;
+  margin-left: -1em;
+  bottom: 0;
+}
 
 .response-input {
-  width: 100%;
+  min-height: 2em;
+  border-radius: 0.25em;
+  background-color: white;
+  padding: 0.5em 0;
 
-  textarea {
-    border-bottom: none;
-    border-radius: 0.25em;
-    background-color: white;
-    padding: 0.5em 0;
-  }
-
-  textarea:disabled {
-    background-color: lightgray;
+  mat-form-field {
+    width: 100%;
   }
 
   ::ng-deep .mat-form-field-underline {
@@ -54,4 +51,3 @@ $response-background-color: #1E90FF;
   }
 
 }
-

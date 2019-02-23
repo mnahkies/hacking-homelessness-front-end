@@ -9,14 +9,14 @@ import {SetOnboardingQuestions} from './state/core.actions';
 import {CoreState} from './state/core.state';
 import {NgxsLoggerPluginModule} from '@ngxs/logger-plugin';
 import {NavHeaderComponent} from './components/nav-header/nav-header.component';
+import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
+import {ConversationComponent} from './components/conversation/conversation.component';
 import {MaterialModule} from './shared/material.module';
 import {HomePageComponent} from './pages/home-page/home-page.component';
 import {TaskProgressionComponent} from './components/task-progression/task-progression.component';
 import {TasksComponent} from './components/tasks/tasks.component';
 import {LessonsComponent} from './components/lessons/lessons.component';
 import {LessonComponent} from './components/lesson/lesson.component';
-import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
-import {ConversationComponent} from './components/conversation/conversation.component';
 import {QuestionType} from './interfaces';
 import {OnboardingQuestionnairePageComponent} from './pages/onboarding-questionnaire-page/onboarding-questionnaire-page.component';
 import {environment} from '../environments/environment';
@@ -79,6 +79,7 @@ export class AppModule {
         id: '2',
         text: 'What is your name?',
         type: QuestionType.FreeForm,
+        nextQuestionId: '3',
       },
       '3': {
         id: '3',
