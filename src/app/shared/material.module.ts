@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import { NgModule } from "@angular/core";
 import {
   MatButtonModule,
   MatCardModule,
@@ -8,8 +8,8 @@ import {
   MatMenuModule,
   MatProgressSpinnerModule,
   MatRadioModule,
-  MatToolbarModule,
-} from '@angular/material';
+  MatToolbarModule
+} from "@angular/material";
 
 @NgModule({
   declarations: [],
@@ -21,7 +21,7 @@ import {
     MatInputModule,
     MatMenuModule,
     MatProgressSpinnerModule,
-    MatToolbarModule,
+    MatToolbarModule
   ],
   exports: [
     MatButtonModule,
@@ -32,9 +32,8 @@ import {
     MatProgressSpinnerModule,
     MatInputModule,
     MatMenuModule,
-    MatToolbarModule,
+    MatToolbarModule
   ],
-  providers: [],
+  providers: []
 })
-export class MaterialModule {
-}
+export class MaterialModule {}
