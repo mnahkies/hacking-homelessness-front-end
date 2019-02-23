@@ -14,9 +14,11 @@ import { MaterialModule } from "./shared/material.module";
 import { HomeComponent } from './home/home.component';
 import { TaskProgressionComponent } from './task-progression/task-progression.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { LessonsComponent } from './lessons/lessons.component';
+import { LessonComponent } from './lesson/lesson.component';
 
 @NgModule({
-  declarations: [AppComponent, NavHeaderComponent, HomeComponent, TaskProgressionComponent, TasksComponent],
+  declarations: [AppComponent, NavHeaderComponent, HomeComponent, TaskProgressionComponent, TasksComponent, LessonsComponent, LessonComponent],
   imports: [
     BrowserModule,
     FormsModule,

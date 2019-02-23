@@ -9,7 +9,8 @@ import {
   MatProgressSpinnerModule,
   MatRadioModule,
   MatToolbarModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatGridListModule
 } from "@angular/material";
 
 @NgModule({
@@ -23,7 +24,8 @@ import {
     MatMenuModule,
     MatProgressSpinnerModule,
     MatToolbarModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatGridListModule
   ],
   exports: [
     MatButtonModule,
@@ -35,7 +37,8 @@ import {
     MatInputModule,
     MatMenuModule,
     MatToolbarModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatGridListModule
   ],
   providers: []
 })
