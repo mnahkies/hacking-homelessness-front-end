@@ -1,21 +1,23 @@
 .navbar {
-  background-color: #3c4d72;
+
   box-shadow: -1px 2px 20px 4px #999;
+  height: 56px;
 }
 
 .burger {
   color: white;
 }
 
-.trophy {
-  float: right;
-  transform: translate(-150%, 50%);
-  cursor: pointer;
-}
-
 .points {
   color: white;
-  float: right;
-  transform: translate(65%, 50%);
-  cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+mat-toolbar {
+  background-color: #3c4d72;
+  position: fixed;
+  top: 0;
 }

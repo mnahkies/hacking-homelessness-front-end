@@ -1,22 +1,25 @@
-<div class="navbar">
-  <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon class="burger">view_headline</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="">
-      <span>Home</span>
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon class="burger">view_headline</mat-icon>
     </button>
-    <button mat-menu-item routerLink="onboarding/questionnaire">
-      <span>Achievements</span>
-    </button>
-    <button mat-menu-item routerLink="">
-      <span>Logout</span>
-    </button>
-  </mat-menu>
-  <span routerLink="onboarding/questionnaire">
-    <img class="trophy" src="./../../../assets/images/trophy.svg" />
-    <span class="points">
-      {{ points }}
-    </span>
-  </span>
-</div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="">
+        <span>Home</span>
+      </button>
+      <button mat-menu-item routerLink="onboarding/questionnaire">
+        <span>Onboarding</span>
+      </button>
+      <button mat-menu-item routerLink="">
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+
+    <span class="spacer"></span>
+
+    <a routerLink="achievements">
+      <img class="trophy" src="assets/images/trophy.svg"/>
+      <span class="points"> {{ points }} </span>
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>
