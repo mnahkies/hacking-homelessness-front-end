@@ -8,4 +8,42 @@
   padding-top: 15px;
   background-color: lemonchiffon;
   cursor: pointer;
+  border-radius: 8px;
+  padding-top: 80px;
+}
+
+.inner-lesson {
+  background-color: white;
+  height: 100%;
+  padding: 12px;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.continue-status {
+  text-align: center;
+  background-color: #3aa3ff;
+  color: white;
+  font-size: 14px;
+  font-family: "Varela Round", sans-serif;
+  border-radius: 0 0 8px 8px;
+  padding: 5px 0;
+}
+
+.locked-status {
+  text-align: center;
+  background-color: #3c4d72;
+  color: #99c1db;
+  font-size: 14px;
+  font-family: "Varela Round", sans-serif;
+  border-radius: 0 0 8px 8px;
+  padding: 5px 0;
+}
+
+.details {
+  font-family: "Varela Round", sans-serif;
+  color: #3c4d72;
+  font-size: 11px;
 }

@@ -1,11 +1,11 @@
 export enum QuestionType {
-  FreeForm = 'free-form',
-  MultiChoice = 'multi-choice'
+  FreeForm = "free-form",
+  MultiChoice = "multi-choice"
 }
 
 export interface MultiChoiceQuestion {
   id: string;
-  type: 'multi-choice';
+  type: "multi-choice";
   text: string;
   answers: Answer[];
 }
@@ -18,7 +18,7 @@ export interface Answer {
 
 export interface FreeFormQuestion {
   id: string;
-  type: 'free-form';
+  type: "free-form";
   text: string;
   nextQuestionId?: string;
 }
@@ -26,14 +26,14 @@ export interface FreeFormQuestion {
 export type Question = FreeFormQuestion | MultiChoiceQuestion;
 
 export type ConversationScript = {
-  firstQuestionId: string
-  questions: Dictionary<Question>
-}
+  firstQuestionId: string;
+  questions: Dictionary<Question>;
+};
 
 export type ConversationScriptResult = {
-  history: any[]
-  answers: Dictionary<string>
-}
+  history: any[];
+  answers: Dictionary<string>;
+};
 
 // eg: GET /api/onboarding/questions
 export interface GetQuestionsResponse {
@@ -48,7 +48,11 @@ export interface PostAnswersResponse {
 
 export interface Lesson {
   name: string;
+  header: string;
+  details: string;
   icon: string;
   id: string;
   uri: string;
+  done: boolean;
+  locked: boolean;
 }

@@ -1,4 +1,18 @@
 <div class="lesson" routerLink="{{ lesson.uri }}">
-  <mat-icon>{{ lesson.icon }}</mat-icon>
-  <h5>{{ lesson.name }}</h5>
+  <div class="inner-lesson">
+    <h3 style="margin-top: 0;" class="card-overline">
+      {{ lesson.name }}
+    </h3>
+    <h2 class="card-title">
+      {{ lesson.header }}
+    </h2>
+    <p class="details">{{ lesson.details }}</p>
+  </div>
+
+  <div *ngIf="!lesson.done && !lesson.locked" class="continue-status">
+    Continue
+  </div>
+  <div *ngIf="!lesson.done && lesson.locked" class="locked-status">
+    Locked
+  </div>
 </div>
