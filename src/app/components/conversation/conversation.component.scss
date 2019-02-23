@@ -1,13 +1,17 @@
-$question-background-color: red;
-$response-background-color: #1E90FF;
+$question-background-color: #FFFFFF;
+$question-foreground-color: #3C4D72;
+$response-background-color: #368CDD;
+$response-foreground-color: #FFFFFF;
 
 .message {
   display: flex;
   flex-direction: row;
   margin: 1em 0;
+  border-radius: 8px;
 }
 
 .message span {
+  border-radius: 8px;
   padding: 0.5em;
   color: white;
 }
@@ -16,7 +20,9 @@ $response-background-color: #1E90FF;
   justify-content: flex-start;
 
   span {
-    background-color: $question-background-color;
+    color: $question-foreground-color;
+    background: $question-background-color;
+    box-shadow: 0 2px 0 0 #19284A;
   }
 }
 
@@ -24,6 +30,7 @@ $response-background-color: #1E90FF;
   justify-content: flex-end;
 
   span {
+    color: $response-foreground-color;
     background-color: $response-background-color;
   }
 }
