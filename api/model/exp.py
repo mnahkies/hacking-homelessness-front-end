@@ -1,4 +1,4 @@
-from model.motivation.accomplishment import Accomplishment
+from model.motivation.achievement import Achievement
 
 
 class ExperiencePoint:
@@ -6,7 +6,7 @@ class ExperiencePoint:
     def __init__(self):
         self.task = set()
 
-    def complete(self, accomplishment: Accomplishment):
+    def complete(self, accomplishment: Achievement):
         self.task.add(accomplishment)
 
     def point(self):
