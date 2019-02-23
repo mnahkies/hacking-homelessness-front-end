@@ -7,7 +7,6 @@ import { FormsModule } from "@angular/forms";
 @NgModule({
   declarations: [QuestionairePageComponent],
   imports: [CommonModule, FormsModule, MaterialModule],
-  declarations: [QuestionairePageComponent],
   entryComponents: [QuestionairePageComponent]
 })
 export class OnboardingModule {}
