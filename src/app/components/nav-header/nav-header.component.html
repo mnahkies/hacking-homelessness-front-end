@@ -3,22 +3,6 @@
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon class="burger">view_headline</mat-icon>
     </button>
-<<<<<<< HEAD
-    <button mat-menu-item routerLink="onboarding/questionnaire">
-      <span>Achievements</span>
-    </button>
-    <button mat-menu-item routerLink="">
-      <span>Logout</span>
-    </button>
-  </mat-menu>
-  <span routerLink="achievements">
-    <img class="trophy" src="./../../../assets/images/trophy.svg" />
-    <span class="points">
-      {{ points }}
-    </span>
-  </span>
-</div>
-=======
     <mat-menu #menu="matMenu">
       <button mat-menu-item routerLink="">
         <span>Home</span>
@@ -34,9 +18,8 @@
     <span class="spacer"></span>
 
     <a routerLink="achievements">
-      <img class="trophy" src="assets/images/trophy.svg"/>
+      <img class="trophy" src="assets/images/trophy.svg" />
       <span class="points"> {{ points }} </span>
     </a>
   </mat-toolbar-row>
 </mat-toolbar>
->>>>>>> master
