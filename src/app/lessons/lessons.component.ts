@@ -14,12 +14,14 @@ export class LessonsComponent implements OnInit {
       {
         name: "lesson 1",
         icon: "android",
-        id: "1"
+        id: "1",
+        uri: "onboarding/questionaire"
       },
       {
         name: "lesson 2",
         icon: "dashboard",
-        id: "2"
+        id: "2",
+        uri: "onboarding/questionaire"
       }
     ];
   }

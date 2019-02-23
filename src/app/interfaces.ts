@@ -40,4 +40,5 @@ export interface Lesson {
   name: string;
   icon: string;
   id: string;
+  uri: string;
 }
