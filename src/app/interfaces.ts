@@ -25,6 +25,16 @@ export interface FreeFormQuestion {
 
 export type Question = FreeFormQuestion | MultiChoiceQuestion;
 
+export type ConversationScript = {
+  firstQuestionId: string
+  questions: Dictionary<Question>
+}
+
+export type ConversationScriptResult = {
+  history: any[]
+  answers: Dictionary<string>
+}
+
 // eg: GET /api/onboarding/questions
 export interface GetQuestionsResponse {
   firstQuestionId: string;

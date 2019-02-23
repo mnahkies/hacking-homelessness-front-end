@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Lesson} from '../interfaces';
+import {Lesson} from '../../interfaces';
 
 @Component({
   selector: 'app-lessons',
