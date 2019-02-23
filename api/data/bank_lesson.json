@@ -7,154 +7,177 @@
   },
   {
     "id": "2",
-    "text": "please choose your language",
+    "text": "Would you like to know about what a bank account is for?",
     "type": "multi-choice",
     "answers": [
       {
-        "id": "en",
-        "text": "English",
-        "nextQuestionId": "2"
+        "id": "y",
+        "text": "Yeah, please",
+        "nextQuestionId": "3"
       },
       {
-        "id": "ro",
-        "text": "Română",
-        "nextQuestionId": "2"
-      },
-      {
-        "id": "ar",
-        "text": "العربية",
-        "nextQuestionId": "2"
-      },
-      {
-        "id": "ku",
-        "text": "کوردی",
-        "nextQuestionId": "2"
-      },
-      {
-        "id": "pl",
-        "text": "Polski",
-        "nextQuestionId": "2"
+        "id": "n",
+        "text": "No, I know what it’s for",
+        "nextQuestionId": "20"
       }
     ]
   },
   {
     "id": "3",
-    "text": "Welcome to piece of pie, my name’s PieBot,",
+    "text": "Ok.",
     "type": "statement",
     "nextQuestionId": "4"
   },
   {
     "id": "4",
-    "text": "What's your name?",
-    "type": "free-form",
+    "text": "A bank account is place to store your money.",
+    "type": "statement",
     "nextQuestionId": "5"
   },
   {
     "id": "5",
-    "text": "Hey Sarah, nice to meet you.",
+    "text": "When you open a bank account, you enter into an agreement with the bank meaning they will look after your money and let you gain access when you need it.",
     "type": "statement",
     "nextQuestionId": "6"
   },
   {
     "id": "6",
-    "text": "I’m here to share what I know about leading an independent life.",
+    "text": "When your money is in the bank, it is protected as only you can access it.",
     "type": "statement",
     "nextQuestionId": "7"
   },
   {
     "id": "7",
-    "text": "There are a few topics to this.",
+    "text": "You can access your money from the bank via a cash machine or online banking.",
     "type": "statement",
     "nextQuestionId": "8"
   },
   {
     "id": "8",
-    "text": "Where would you first like to focus first?",
+    "text": "How’s that all so far?",
     "type": "multi-choice",
     "answers": [
       {
-        "id": "housing",
-        "text": "Housing",
-        "nextQuestionId": ""
+        "id": "no",
+        "text": "Can you repeat?",
+        "nextQuestionId": "4"
       },
       {
-        "id": "money",
-        "text": "Money",
+        "id": "yes",
+        "text": "Good.",
+        "nextQuestionId": "17"
+      },
+      {
+        "id": "next",
+        "text": "What’s online banking?",
         "nextQuestionId": "9"
-      },
-      {
-        "id": "work",
-        "text": "Work and Education",
-        "nextQuestionId": ""
-      },
-      {
-        "id": "life",
-        "text": "Life Skills",
-        "nextQuestionId": ""
       }
     ]
   },
   {
     "id": "9",
-    "text": "Good choice!",
+    "text": "Online banking, is an easy way to keep up to date on what your spending your money on.",
     "type": "statement",
     "nextQuestionId": "10"
   },
   {
     "id": "10",
-    "text": "Understanding money is a great stepping stone to independence.",
+    "text": "And, you can also use it to stay up to date with payments.",
     "type": "statement",
     "nextQuestionId": "11"
   },
   {
     "id": "11",
-    "text": "Where you’d like to start:",
+    "text": "It will also save you time from going to visit a bank branch!",
     "type": "statement",
-    "answers": [
-      {
-        "id": "1",
-        "text": "Opening a Bank Account",
-        "nextQuestionId": "12"
-      },
-      {
-        "id": "2",
-        "text": "Reducing Debt",
-        "nextQuestionId": ""
-      },
-      {
-        "id": "3",
-        "text": "Managing Money",
-        "nextQuestionId": ""
-      },
-      {
-        "id": "4",
-        "text": "Increasing Income",
-        "nextQuestionId": ""
-      }
-    ]
+    "nextQuestionId": "12"
   },
   {
     "id": "12",
-    "text": "Nice, you’re on a roll already.",
+    "text": "See what Alfonso uses her online banking for",
     "type": "statement",
     "nextQuestionId": "13"
   },
   {
     "id": "13",
-    "text": "First achievements!",
-    "type": "statement",
+    "text": "",
+    "type": "media",
     "nextQuestionId": "14"
   },
   {
     "id": "14",
-    "text": "- Setting up my account",
-    "type": "statement",
-    "nextQuestionId": "15"
+    "text": "Would you like to learn more or move on?",
+    "type": "multi-choice",
+    "answers": [
+      {
+        "id": "no",
+        "text": "Move on",
+        "nextQuestionId": "20"
+      },
+      {
+        "id": "yes",
+        "text": "Learn more.",
+        "nextQuestionId": "15"
+      }
+    ]
   },
   {
     "id": "15",
-    "text": "- Having a new focus",
+    "text": "If you want to learn more, I recommend reading",
     "type": "statement",
-    "nextQuestionId": "13"
+    "nextQuestionId": "16"
+  },
+  {
+    "id": "16",
+    "text": "https://www.moneyadviceservice.org.uk/en/articles/beginners-guide-to-online-banking#what-is-online-banking",
+    "type": "statement",
+    "nextQuestionId": "17"
+  },
+  {
+    "id": "17",
+    "text": "Next, I’m going to tell you about, types of bank account.",
+    "type": "statement",
+    "nextQuestionId": "18"
+  },
+  {
+    "id": "18",
+    "text": "Shall we carry on?",
+    "type": "multi-choice",
+    "answers": [
+      {
+        "id": "no",
+        "text": "Sure, keep going",
+        "nextQuestionId": "19"
+      },
+      {
+        "id": "yes",
+        "text": "No, I’m done for now",
+        "nextQuestionId": "19"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "text": "Ok, whatever you want",
+    "type": "statement",
+    "nextQuestionId": "20"
+  },
+  {
+    "id": "20",
+    "text": "Good start today.",
+    "type": "statement",
+    "nextQuestionId": "21"
+  },
+  {
+    "id": "21",
+    "text": "Come back and chat when you want to learn more.",
+    "type": "statement",
+    "nextQuestionId": "22"
+  },
+  {
+    "id": "22",
+    "text": "Come back and chat when you want to learn more.",
+    "type": "statement",
+    "nextQuestionId": ""
   }
 ]

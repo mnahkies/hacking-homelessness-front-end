@@ -13,27 +13,27 @@
       {
         "id": "en",
         "text": "English",
-        "nextQuestionId": "2"
+        "nextQuestionId": "3"
       },
       {
         "id": "ro",
         "text": "Română",
-        "nextQuestionId": "2"
+        "nextQuestionId": "3"
       },
       {
         "id": "ar",
         "text": "العربية",
-        "nextQuestionId": "2"
+        "nextQuestionId": "3"
       },
       {
         "id": "ku",
         "text": "کوردی",
-        "nextQuestionId": "2"
+        "nextQuestionId": "3"
       },
       {
         "id": "pl",
         "text": "Polski",
-        "nextQuestionId": "2"
+        "nextQuestionId": "3"
       }
     ]
   },
@@ -155,6 +155,6 @@
     "id": "15",
     "text": "- Having a new focus",
     "type": "statement",
-    "nextQuestionId": "13"
+    "nextQuestionId": ""
   }
 ]
