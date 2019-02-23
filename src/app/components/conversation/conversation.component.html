@@ -1,0 +1,51 @@
+<div class="conversation-history">
+  <div *ngFor="let message of history" class="message" [ngClass]="message.position">
+    <span>{{message.content}}</span>
+  </div>
+</div>
+
+<div style="display: flex" *ngIf="currentAnswers.length">
+
+  <span style="flex: 1 1"></span>
+
+  <mat-chip-list class="mat-chip-list-stacked" aria-orientation="vertical">
+
+    <mat-chip *ngFor="let answer of currentAnswers"
+              (click)="selectAnswer(answer, currentQuestion)">
+      {{answer.text}}
+    </mat-chip>
+
+  </mat-chip-list>
+
+  <span style="flex: 1 1"></span>
+
+</div>
+
+<br>
+
+<form #responseForm="ngForm"
+      *ngIf="currentQuestion; else continueButton"
+      (ngSubmit)="submitResponse(responseInput, currentQuestion)">
+
+  <mat-form-field class="response-input">
+    <textarea #responseInput
+              [disabled]="!!currentAnswers.length"
+              cdkTextareaAutosize
+              cdkFocusInitial
+              (keydown.enter)="responseForm.ngSubmit.emit(); $event.preventDefault()"
+              matInput name="response"></textarea>
+  </mat-form-field>
+</form>
+
+<ng-template #continueButton>
+  <button mat-button class="mat-raised-button">
+    Continue
+  </button>
+</ng-template>
+
+<!--
+
+PUT /lessons/:lessonId/completion
+DELETE
+
+-->

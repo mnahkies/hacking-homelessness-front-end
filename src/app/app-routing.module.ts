@@ -1,16 +1,16 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {QuestionairePageComponent} from './onboarding/pages/questionaire-page/questionaire-page.component';
-import {HomeComponent} from './home/home.component';
+import {HomePageComponent} from './pages/home-page/home-page.component';
+import {OnboardingQuestionnairePageComponent} from './pages/onboarding-questionnaire-page/onboarding-questionnaire-page.component';
 
 const routes: Routes = [
   {
-    path: 'onboarding/questionaire',
-    component: QuestionairePageComponent,
+    path: 'onboarding/questionnaire',
+    component: OnboardingQuestionnairePageComponent,
   },
   {
     path: '',
-    component: HomeComponent,
+    component: HomePageComponent,
   },
 ];
 

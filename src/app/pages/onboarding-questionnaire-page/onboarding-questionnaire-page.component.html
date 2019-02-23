@@ -1,0 +1,12 @@
+<app-conversation *ngIf="conversationScript; else loading"
+                  [conversationScript]="conversationScript"
+                  (result)="onScriptCompleted($event)">
+</app-conversation>
+
+<ng-template #loading>
+  <mat-card-content>
+    <div style="display: flex; align-content: center; justify-content: center">
+      <mat-progress-spinner></mat-progress-spinner>
+    </div>
+  </mat-card-content>
+</ng-template>

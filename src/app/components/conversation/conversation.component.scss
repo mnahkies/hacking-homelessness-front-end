@@ -1,0 +1,57 @@
+$question-background-color: red;
+$response-background-color: #1E90FF;
+
+:host {
+  display: block;
+  padding: 1em
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 0;
+}
+
+.message span {
+  border-radius: 0.25em;
+  padding: 0.5em;
+  color: white;
+}
+
+.left {
+  justify-content: flex-start;
+
+  span {
+    background-color: $question-background-color;
+  }
+}
+
+.right {
+  justify-content: flex-end;
+
+  span {
+    background-color: $response-background-color;
+  }
+}
+
+
+.response-input {
+  width: 100%;
+
+  textarea {
+    border-bottom: none;
+    border-radius: 0.25em;
+    background-color: white;
+    padding: 0.5em 0;
+  }
+
+  textarea:disabled {
+    background-color: lightgray;
+  }
+
+  ::ng-deep .mat-form-field-underline {
+    display: none;
+  }
+
+}
+

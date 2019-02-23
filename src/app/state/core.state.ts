@@ -1,10 +1,9 @@
 import {Action, Selector, State, StateContext} from '@ngxs/store';
 import {SetOnboardingQuestions} from './core.actions';
-import {Question} from '../interfaces';
+import {ConversationScript} from '../interfaces';
 
 export class CoreStateModel {
-  firstOnboardingQuestionId = '';
-  onboardingQuestions: Dictionary<Question> = {};
+  onboardingConversationScript?: ConversationScript;
 }
 
 @State<CoreStateModel>({
@@ -14,20 +13,17 @@ export class CoreStateModel {
 export class CoreState {
 
   @Selector()
-  static getOnboardingQuestions(state: CoreStateModel) {
-    return state.onboardingQuestions;
-  }
-
-  @Selector()
-  static getFirstOnboardingQuestionId(state: CoreStateModel) {
-    return state.firstOnboardingQuestionId;
+  static getOnboardingConversationScript(state: CoreStateModel) {
+    return state.onboardingConversationScript;
   }
 
   @Action(SetOnboardingQuestions)
   setOnboardingQuestions({patchState}: StateContext<CoreStateModel>, {questions, firstQuestionId}: SetOnboardingQuestions) {
     patchState({
-      onboardingQuestions: questions,
-      firstOnboardingQuestionId: firstQuestionId,
+      onboardingConversationScript: {
+        firstQuestionId,
+        questions,
+      },
     });
   }
 }
