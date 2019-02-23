@@ -32,6 +32,26 @@ export class LessonsComponent implements OnInit {
         done: false,
         header: "Making pasta",
         details: "Here is an example of some text in a card."
+      },
+      {
+        name: "money",
+        icon: "android",
+        id: "1",
+        uri: "onboarding/questionaire",
+        locked: true,
+        done: false,
+        header: "What is a bank account?",
+        details: "Here is an example of some text in a card."
+      },
+      {
+        name: "life skills",
+        icon: "dashboard",
+        id: "2",
+        uri: "onboarding/questionaire",
+        locked: true,
+        done: false,
+        header: "Making pasta",
+        details: "Here is an example of some text in a card."
       }
     ];
   }
