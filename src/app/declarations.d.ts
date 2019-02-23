@@ -1,2 +1,1 @@
-
-declare type Dictionary<T> = {[key: string]: T}
+declare type Dictionary<T> = { [key: string]: T }

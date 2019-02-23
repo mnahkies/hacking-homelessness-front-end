@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { TaskProgressionComponent } from './task-progression.component';
+import {TaskProgressionComponent} from './task-progression.component';
 
 describe('TaskProgressionComponent', () => {
   let component: TaskProgressionComponent;
@@ -8,9 +8,9 @@ describe('TaskProgressionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TaskProgressionComponent ]
+      declarations: [TaskProgressionComponent],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
