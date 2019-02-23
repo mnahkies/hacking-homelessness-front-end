@@ -1,26 +1,28 @@
 <div>
   <h1 class="section-title">Achievements</h1>
 
-  <table mat-table [dataSource]="achievements" style="width: 100%" class="rounded">
+  <div class="table-wrapper">
+    <table mat-table [dataSource]="achievements" style="width: 100%">
 
-    <ng-container matColumnDef="category">
-      <th mat-header-cell *matHeaderCellDef>Category</th>
-      <td mat-cell *matCellDef="let cell">
-        <div class="category"><span>{{cell.category}}</span></div>
-      </td>
-    </ng-container>
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef>Category</th>
+        <td mat-cell *matCellDef="let cell">
+          <div class="category"><span>{{cell.category}}</span></div>
+        </td>
+      </ng-container>
 
-    <ng-container matColumnDef="points">
-      <th mat-header-cell *matHeaderCellDef>Points</th>
-      <td mat-cell *matCellDef="let cell">
-        <div class="points"><span>{{cell.points}}</span></div>
-      </td>
-    </ng-container>
+      <ng-container matColumnDef="points">
+        <th mat-header-cell *matHeaderCellDef>Points</th>
+        <td mat-cell *matCellDef="let cell">
+          <div class="points"><span>{{cell.points}}</span></div>
+        </td>
+      </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="achievementsColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: achievementsColumns;"></tr>
+      <tr mat-header-row *matHeaderRowDef="achievementsColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: achievementsColumns;"></tr>
 
-  </table>
+    </table>
+  </div>
 
 </div>
 <br>
@@ -32,8 +34,7 @@
 
     <div *ngFor="let streak of streaks"
          class="streak"
-         [ngClass]="streak.headerColor"
-         [style.backgroundColor]="streak.style">
+         [ngClass]="streak.headerColor">
 
       <div class="inner-streak">
         <h3 class="card-overline">

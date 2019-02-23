@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {
+  MatBadgeModule,
   MatButtonModule,
   MatCardModule,
   MatChipsModule,
@@ -30,6 +31,7 @@ import {
     MatProgressBarModule,
     MatGridListModule,
     MatChipsModule,
+    MatBadgeModule,
   ],
   exports: [
     MatButtonModule,
@@ -44,6 +46,7 @@ import {
     MatMenuModule,
     MatToolbarModule,
     MatProgressBarModule,
+    MatBadgeModule,
     MatGridListModule,
   ],
   providers: [],
