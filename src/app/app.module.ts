@@ -20,6 +20,7 @@ import {LessonComponent} from './components/lesson/lesson.component';
 import {QuestionType} from './interfaces';
 import {OnboardingQuestionnairePageComponent} from './pages/onboarding-questionnaire-page/onboarding-questionnaire-page.component';
 import {environment} from '../environments/environment';
+import { AchievementsPageComponent } from './pages/achievements-page/achievements-page.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {environment} from '../environments/environment';
     OnboardingQuestionnairePageComponent,
     TaskProgressionComponent,
     TasksComponent,
+    AchievementsPageComponent,
   ],
   imports: [
     BrowserModule,

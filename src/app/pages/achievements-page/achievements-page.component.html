@@ -1,0 +1,50 @@
+<div>
+  <h1 class="section-title">Achievements</h1>
+
+  <table mat-table [dataSource]="achievements" style="width: 100%" class="rounded">
+
+    <ng-container matColumnDef="category">
+      <th mat-header-cell *matHeaderCellDef>Category</th>
+      <td mat-cell *matCellDef="let cell">
+        <div class="category"><span>{{cell.category}}</span></div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="points">
+      <th mat-header-cell *matHeaderCellDef>Points</th>
+      <td mat-cell *matCellDef="let cell">
+        <div class="points"><span>{{cell.points}}</span></div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="achievementsColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: achievementsColumns;"></tr>
+
+  </table>
+
+</div>
+<br>
+
+<div>
+  <h1 class="section-title">Latest streaks</h1>
+
+  <div class="streaksGrid">
+
+    <div *ngFor="let streak of streaks"
+         class="streak"
+         [ngClass]="streak.headerColor"
+         [style.backgroundColor]="streak.style">
+
+      <div class="inner-streak">
+        <h3 class="card-overline">
+          {{ streak.title | uppercase }}
+        </h3>
+        <h2 class="card-title">
+          {{streak.message}}
+        </h2>
+      </div>
+
+    </div>
+
+  </div>
+</div>

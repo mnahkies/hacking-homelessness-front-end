@@ -11,6 +11,7 @@ import {
   MatProgressBarModule,
   MatProgressSpinnerModule,
   MatRadioModule,
+  MatTableModule,
   MatToolbarModule,
 } from '@angular/material';
 
@@ -22,6 +23,7 @@ import {
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
+    MatTableModule,
     MatMenuModule,
     MatProgressSpinnerModule,
     MatToolbarModule,
@@ -37,6 +39,7 @@ import {
     MatIconModule,
     MatRadioModule,
     MatProgressSpinnerModule,
+    MatTableModule,
     MatInputModule,
     MatMenuModule,
     MatToolbarModule,

@@ -1,0 +1,39 @@
+
+mat-table {
+  padding: 1em;
+  border-radius: 8px;
+}
+
+
+.streak-yellow {
+  background-image: linear-gradient(-227deg, #FFF7D4 16%, #FFEDA9 84%);
+  box-shadow: 0 2px 0 0 #19284A;
+}
+
+.streak-peach {
+  background-image: linear-gradient(-225deg, #FFE6D4 15%, #FFC8A9 85%);
+  box-shadow: 0 2px 0 0 #19284A;
+}
+
+.streak {
+  border-radius: 8px;
+  padding-top: 80px;
+}
+
+.inner-streak {
+  background-color: white;
+  border-radius: 0 0 8px 8px;
+  height: 100%;
+  padding: 12px;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.streaksGrid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}

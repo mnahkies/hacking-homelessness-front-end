@@ -17,9 +17,9 @@ $candy-app-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $candy-app-theme: mat-light-theme(
-  $candy-app-primary,
-  $candy-app-accent,
-  $candy-app-warn
+    $candy-app-primary,
+    $candy-app-accent,
+    $candy-app-warn
 );
 
 // Include theme styles for core and each component used in your app.
@@ -33,8 +33,37 @@ html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: whitesmoke;
+  //background-color: whitesmoke;
+  background-image: linear-gradient(-229deg, #942FBE 0%, #0B2752 100%);
+}
+
+
+.section-title {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+
+.card-overline {
+  font-family: 'Rubik', sans-serif;
+  font-size: 11px;
+  color: #99C1DB;
+  letter-spacing: 1.75px;
+}
+
+.card-title {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #3C4D72;
+}
+
+.card-body {
+
 }
