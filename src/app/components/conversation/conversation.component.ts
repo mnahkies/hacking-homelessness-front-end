@@ -36,7 +36,7 @@ export class ConversationComponent implements OnInit {
   answers: { [questionId: string]: string } = {};
 
   @Input()
-  continueLink: string = "/home";
+  continueLink: string = "/pointsgained";
 
   @Output()
   result = new EventEmitter<ConversationScriptResult>();
