@@ -27,7 +27,7 @@ export interface FreeFormQuestion {
 
 export interface Link {
   id: string
-  type: "link"
+  type: 'link'
   text: string
   previewImage: string
   url: string

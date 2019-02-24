@@ -11,7 +11,6 @@ import {IncreaseScore} from '../../state/core.actions';
   styleUrls: ['./lesson-page.component.scss'],
 })
 export class LessonPageComponent implements OnInit {
-
   conversationScript?: ConversationScript;
 
   private subscription = Subscription.EMPTY;
@@ -20,8 +19,9 @@ export class LessonPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.subscription = this.store.select(CoreState.getFinanceLessonConversationScript)
-      .subscribe(it => this.conversationScript = it);
+    this.subscription = this.store
+      .select(CoreState.getFinanceLessonConversationScript)
+      .subscribe(it => (this.conversationScript = it));
   }
 
   ngOnDestroy(): void {
@@ -31,6 +31,6 @@ export class LessonPageComponent implements OnInit {
   onScriptCompleted(result: ConversationScriptResult) {
     console.info('conversation completed with result', result);
     // todo persist
-    this.store.dispatch(new IncreaseScore(20))
-  };
+    this.store.dispatch(new IncreaseScore(0));
+  }
 }

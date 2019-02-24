@@ -1,5 +1,5 @@
 import {Action, Selector, State, StateContext} from '@ngxs/store';
-import {IncreaseScore, SetOnboardingQuestions, SetFinanceLesson} from './core.actions';
+import {IncreaseScore, SetFinanceLesson, SetOnboardingQuestions} from './core.actions';
 import {ConversationScript} from '../interfaces';
 
 export class CoreStateModel {

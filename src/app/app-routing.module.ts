@@ -4,6 +4,7 @@ import {HomePageComponent} from './pages/home-page/home-page.component';
 import {OnboardingQuestionnairePageComponent} from './pages/onboarding-questionnaire-page/onboarding-questionnaire-page.component';
 import {AchievementsPageComponent} from './pages/achievements-page/achievements-page.component';
 import {LessonPageComponent} from './pages/lesson-page/lesson-page.component';
+import {PointedGainedComponent} from './components/pointed-gained/pointed-gained.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomePageComponent,
+  },
+  {
+    path: 'pointsgained',
+    component: PointedGainedComponent,
   },
 ];
 
