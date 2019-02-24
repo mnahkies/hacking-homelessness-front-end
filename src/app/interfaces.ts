@@ -53,7 +53,6 @@ export interface Lesson {
   details: string;
   icon: string;
   id: string;
-  uri: string;
   done: boolean;
   locked: boolean;
   className: string;

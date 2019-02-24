@@ -1,4 +1,4 @@
-<div class="lesson" [ngClass]="lesson.className" routerLink="{{ lesson.uri }}">
+<div class="lesson" [ngClass]="lesson.className" routerLink="{{ '/lessons/' + lesson.id}}">
   <div class="inner-lesson">
     <h3 class="card-overline lessonName">
       {{ lesson.name }}
