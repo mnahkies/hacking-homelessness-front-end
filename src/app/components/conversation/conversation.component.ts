@@ -47,7 +47,7 @@ export class ConversationComponent implements OnInit {
 
   private currentQuestionId?: string;
 
-  get currentQuestion() {
+  get currentQuestion(): any {
     let currentQuestionId = this.currentQuestionId;
 
     if (!currentQuestionId) {
