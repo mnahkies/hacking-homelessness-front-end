@@ -8,5 +8,5 @@ EXPOSE 80
 WORKDIR /opt/nahkies/tournament-manager
 RUN cp index.html 404.html
 
-ENTRYPOINT npx http-server -p 80
+ENTRYPOINT npx http-server -c-1 -p 80
 
