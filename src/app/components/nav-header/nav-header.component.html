@@ -16,9 +16,16 @@
     </mat-menu>
 
     <span class="spacer"></span>
+    <span class="spacer">
+      <img class="purplePie" src="./../../../assets/images/purple p.png" />
+    </span>
 
-    <a routerLink="achievements" class="achievements" *ngIf="points$ | async; let points">
-      <img class="trophy" src="assets/images/trophy.svg"/>
+    <a
+      routerLink="achievements"
+      class="achievements"
+      *ngIf="(points$ | async); let points"
+    >
+      <img class="trophy" src="assets/images/trophy.svg" />
       <span class="points"> {{ points }} </span>
     </a>
   </mat-toolbar-row>
