@@ -21,6 +21,7 @@ import {OnboardingQuestionnairePageComponent} from './pages/onboarding-questionn
 import {environment} from '../environments/environment';
 import {AchievementsPageComponent} from './pages/achievements-page/achievements-page.component';
 import {LessonPageComponent} from './pages/lesson-page/lesson-page.component';
+import {QuestionType} from './interfaces';
 
 @NgModule({
   declarations: [
@@ -155,7 +156,7 @@ export class AppModule {
         'id': '4',
         'nextQuestionId': '5',
         'text': 'What\'s your name?',
-        'type': 'free-form',
+        'type': QuestionType.FreeForm,
       },
       '5': {
         'id': '5',
