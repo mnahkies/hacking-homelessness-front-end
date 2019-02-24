@@ -5,7 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
-import {SetOnboardingQuestions} from './state/core.actions';
+import {SetFinanceLesson, SetOnboardingQuestions} from './state/core.actions';
 import {CoreState} from './state/core.state';
 import {NgxsLoggerPluginModule} from '@ngxs/logger-plugin';
 import {NavHeaderComponent} from './components/nav-header/nav-header.component';
@@ -197,6 +197,87 @@ export class AppModule {
         'text': 'Good choice!',
         'type': 'statement',
       },
+    }, '1'));
+
+    store.dispatch(new SetFinanceLesson({
+      '1': {'id': '1', 'nextQuestionId': '2', 'text': 'Hey Sarah,', 'type': 'statement'},
+      '2': {
+        'answers': [
+          {'id': 'y', 'nextQuestionId': '3', 'text': 'Yeah, please'},
+          {'id': 'n', 'nextQuestionId': '18', 'text': 'No, I know what it’s for'}
+        ], 'id': '2', 'text': 'Would you like to know about what a bank account is for?', 'type': 'multi-choice'
+      },
+      '3': {'id': '3', 'nextQuestionId': '4', 'text': 'Sure!', 'type': 'statement'},
+      '4': {'id': '4', 'nextQuestionId': '5', 'text': 'A bank account is place to store your money.', 'type': 'statement'},
+      '5': {
+        'id': '5',
+        'nextQuestionId': '6',
+        'text': 'When you open a bank account, you enter into an agreement with the bank meaning they will look after your money and let you gain access when you need it.',
+        'type': 'statement'
+      },
+      '6': {
+        'id': '6',
+        'nextQuestionId': '7',
+        'text': 'When your money is in the bank, it is protected as only you can access it.',
+        'type': 'statement'
+      },
+      '7': {
+        'id': '7',
+        'nextQuestionId': '8',
+        'text': 'You can access your money from the bank via a cash machine or online banking.',
+        'type': 'statement'
+      },
+      '8': {
+        'answers': [
+          {'id': 'yes', 'nextQuestionId': '17', 'text': 'Good.'},
+          {'id': 'next', 'nextQuestionId': '9', 'text': 'What’s online banking?'}
+        ],
+        'id': '8',
+        'text': 'How’s that all so far?',
+        'type': 'multi-choice'
+      },
+      '9': {
+        'id': '9',
+        'nextQuestionId': '10',
+        'text': 'Online banking, is an easy way to keep up to date on what your spending your money on.',
+        'type': 'statement'
+      },
+      '10': {'id': '10', 'nextQuestionId': '11', 'text': 'And, you can also use it to stay up to date with payments.', 'type': 'statement'},
+      '11': {
+        'id': '11',
+        'nextQuestionId': '12',
+        'text': 'It will also save you time from going to visit a bank branch!',
+        'type': 'statement'
+      },
+      //TODO: Put this back to 13 after
+      '12': {'id': '12', 'nextQuestionId': '14', 'text': 'See what Alfonso uses his online banking for', 'type': 'statement'},
+      // '13': {'id': '13', 'nextQuestionId': '14', 'text': '', 'type': 'media'},
+      '14': {
+        'answers': [{'id': 'no', 'nextQuestionId': '20', 'text': 'Move on'}, {
+          'id': 'yes',
+          'nextQuestionId': '15',
+          'text': 'Learn more.'
+        }], 'id': '14', 'text': 'Would you like to learn more or move on?', 'type': 'multi-choice'
+      },
+      '15': {'id': '15', 'nextQuestionId': '16', 'text': 'If you want to learn more, I recommend reading', 'type': 'statement'},
+      '16': {
+        'id': '16',
+        'type': 'link',
+        url: 'https://www.moneyadviceservice.org.uk/en/articles/beginners-guide-to-online-banking',
+        previewImage: 'https://mascdn.azureedge.net/frontend/a/MAS-logo_social-sharing-81e81c01d7ff9665b49321164faf4fb9.png',
+        text: 'Online banking, or internet banking, has become increasingly popular but how does it work and is it safe?',
+        'nextQuestionId': '17'
+      },
+      '17': {'id': '17', 'nextQuestionId': '18', 'text': 'Next, I’m going to tell you about, types of bank account.', 'type': 'statement'},
+      '18': {
+        'answers': [
+          {'id': 'no', 'nextQuestionId': '', 'text': 'Sure, keep going'},
+          {'id': 'yes', 'nextQuestionId': '19', 'text': 'No, I’m done for now'}
+        ], 'id': '18', 'text': 'Shall we carry on?', 'type': 'multi-choice'
+      },
+      '19': {'id': '19', 'nextQuestionId': '20', 'text': 'All right.', 'type': 'statement'},
+      '20': {'id': '20', 'nextQuestionId': '21', 'text': 'Good start today.', 'type': 'statement'},
+      '21': {'id': '21', 'nextQuestionId': '', 'text': 'Come back and chat when you want to learn more.', 'type': 'statement'}
     }, '1'));
   }
 }

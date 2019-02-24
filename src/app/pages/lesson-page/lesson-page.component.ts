@@ -20,7 +20,7 @@ export class LessonPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.subscription = this.store.select(CoreState.getOnboardingConversationScript)
+    this.subscription = this.store.select(CoreState.getFinanceLessonConversationScript)
       .subscribe(it => this.conversationScript = it);
   }
 
