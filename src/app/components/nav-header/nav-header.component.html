@@ -16,10 +16,15 @@
     </mat-menu>
 
     <span class="spacer"></span>
+    <span class="spacer">
+      <img class="purplePie" src="./../../../assets/images/purple p.png"/>
+    </span>
 
-    <a routerLink="achievements" class="achievements" *ngIf="points$ | async; let points">
+    <a routerLink="achievements"
+       class="achievements">
       <img class="trophy" src="assets/images/trophy.svg"/>
-      <span class="points"> {{ points }} </span>
+
+      <span class="points" [class.hidden]="hidePoints"> {{ points }} </span>
     </a>
   </mat-toolbar-row>
 </mat-toolbar>

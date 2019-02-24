@@ -6,21 +6,22 @@
       [ngClass]="message.position"
     >
       <span
-        >{{ message.content }}
+      >{{ message.content }}
         <span
           style="box-shadow: none;"
           *ngIf="message.previewImage !== undefined"
         >
-          <br />
-          <img style="max-width: 200px;" [src]="message.previewImage" />
+          <br/>
+          <img style="max-width: 200px;" [src]="message.previewImage"/>
         </span>
-        <span style="box-shadow: none;" *ngIf="message.url !== undefined">
-          <br />
-          <a [href]="message.url">click here for more details</a>
+        <span style="box-shadow: none;" *ngIf="message.url !== undefined && message.url !== 'do_not_render'">
+          <br/>
+          <a target="_blank" [href]="message.url">
+            click here for more details</a>
         </span>
       </span>
     </div>
-    <br class="scroll-anchor" />
+    <br class="scroll-anchor"/>
   </div>
 
   <div class="actual-bottom-tray">

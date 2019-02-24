@@ -13,7 +13,7 @@ export class TasksComponent implements OnInit {
     this.tasks = [
       {
         done: false,
-        name: "Setup Bank Account",
+        name: "Find closest bank",
         borderStyle: "financeTaskColor"
       },
       {

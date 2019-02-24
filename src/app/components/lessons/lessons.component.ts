@@ -20,7 +20,7 @@ export class LessonsComponent implements OnInit {
         locked: false,
         done: false,
         header: "What is a bank account?",
-        details: "Here is an example of some text in a card.",
+        details: "A bank account is a place to store your money",
         className: 'financeLessonColor'
       },
       {
@@ -30,7 +30,7 @@ export class LessonsComponent implements OnInit {
         locked: true,
         done: false,
         header: "Making pasta",
-        details: "Here is an example of some text in a card.",
+        details: "Pasta is a filling, tasty, cheap easy meal.",
         className: 'lifeLessonColor'
       },
       {
@@ -40,7 +40,7 @@ export class LessonsComponent implements OnInit {
         locked: true,
         done: false,
         header: "How to stay active",
-        details: "Here is an example of some text in a card.",
+        details: "Easy ways of staying fit in a busy city.",
         className: 'healthLessonColor'
       },
       {
@@ -49,8 +49,8 @@ export class LessonsComponent implements OnInit {
         id: "2",
         locked: true,
         done: false,
-        header: "Learn something new today",
-        details: "Here is an example of some text in a card.",
+        header: "Learn new skills",
+        details: "Ever wondered what it takes to learn a trade?",
         className: 'educationLessonColor'
       }
     ];

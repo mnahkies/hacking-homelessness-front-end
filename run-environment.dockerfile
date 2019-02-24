@@ -6,6 +6,7 @@ ENV PORT 80
 EXPOSE 80
 
 WORKDIR /opt/nahkies/tournament-manager
+RUN cp index.html 404.html
 
-ENTRYPOINT ./node_modules/.bin/ng serve --port 80
+ENTRYPOINT npx http-server -c-1 -p 80
 

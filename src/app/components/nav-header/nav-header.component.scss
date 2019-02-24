@@ -6,6 +6,11 @@
   color: white;
 }
 
+.purplePie {
+  max-width: 40px;
+  margin-top: 5px;
+}
+
 .points {
   color: white;
   font-family: "Rubik", sans-serif;
@@ -19,4 +24,8 @@ mat-toolbar {
   position: fixed;
   top: 0;
   z-index: 100;
+}
+
+.hidden {
+  visibility: hidden;
 }

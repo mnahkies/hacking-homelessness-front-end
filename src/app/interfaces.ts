@@ -46,17 +46,6 @@ export type ConversationScriptResult = {
   answers: Dictionary<string>;
 };
 
-// eg: GET /api/onboarding/questions
-export interface GetQuestionsResponse {
-  firstQuestionId: string;
-  questions: { [questionId: string]: Question };
-}
-
-// eg: POST /api/onboarding/answers
-export interface PostAnswersResponse {
-  [questionId: string]: string;
-}
-
 export interface Lesson {
   name: string;
   header: string;

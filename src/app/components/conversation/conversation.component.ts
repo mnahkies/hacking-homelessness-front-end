@@ -47,7 +47,7 @@ export class ConversationComponent implements OnInit {
 
   private currentQuestionId?: string;
 
-  get currentQuestion() {
+  get currentQuestion(): any {
     let currentQuestionId = this.currentQuestionId;
 
     if (!currentQuestionId) {
@@ -102,7 +102,7 @@ export class ConversationComponent implements OnInit {
     if (question) {
       this.addQuestionToHistory(question);
 
-      if (question.type === QuestionType.Statement) {
+      if (question.type === QuestionType.Statement || question.type === QuestionType.Link) {
         let nextQuestionId = question.nextQuestionId;
 
         //TODO set timeout after transition in finished
