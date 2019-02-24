@@ -6,8 +6,14 @@ $response-foreground-color: #FFFFFF;
 .message {
   display: flex;
   flex-direction: row;
-  margin: 1em 0;
+  margin: 6px 0.5em;
   border-radius: 8px;
+
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 400;
+
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .message span {
@@ -42,18 +48,33 @@ $response-foreground-color: #FFFFFF;
   bottom: 0;
 }
 
+.actual-bottom-tray {
+  height: 120px;
+  background: rgba(25, 40, 74, 0.50);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .response-input {
-  min-height: 2em;
+  //max-height: 2em;
   border-radius: 0.25em;
-  background-color: white;
   padding: 0.5em 0;
+  width: 100%;
 
-  mat-form-field {
-    width: 100%;
+  input {
+    background-color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 8px;
   }
+}
 
-  ::ng-deep .mat-form-field-underline {
-    display: none;
-  }
-
+.mat-chip.mat-standard-chip {
+  color: #fff;
+  background: #3AA3FF;
+  box-shadow: 0 2px 0 0 #19284A;
+  border-radius: 8px;
+  border-radius: 8px;
 }

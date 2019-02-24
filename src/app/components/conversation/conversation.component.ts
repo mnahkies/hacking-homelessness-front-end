@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {
   Answer,
   ConversationScript,
@@ -24,8 +24,13 @@ export class ConversationComponent implements OnInit {
   @Input() conversationScript!: ConversationScript;
   answers: { [questionId: string]: string } = {};
 
+  @Input()
+  continueLink: string = '/home';
+
   @Output()
   result = new EventEmitter<ConversationScriptResult>();
+
+  @ViewChild('.scroll-anchor') scrollAnchor!: HTMLBRElement;
 
   readonly history: Message[] = [];
 
@@ -82,12 +87,32 @@ export class ConversationComponent implements OnInit {
 
     if (question) {
       this.addQuestionToHistory(question);
+
+      if (question.type === QuestionType.Statement) {
+        let nextQuestionId = question.nextQuestionId;
+
+        //TODO set timeout after transition in finished
+        setTimeout(() => {
+          this.goToQuestion(nextQuestionId);
+        }, 1500);
+      }
+
     } else {
       this.result.emit({
         history: this.history,
         answers: this.answers,
       });
     }
+
+    setTimeout(function () {
+      let inp: HTMLInputElement | null = document.querySelector('input[name=\'response\']');
+
+      if (inp) {
+        inp.focus();
+      }
+
+    }, 10);
+
   }
 
   private addQuestionToHistory(question: Question) {

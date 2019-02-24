@@ -1,11 +1,12 @@
 export enum QuestionType {
-  FreeForm = "free-form",
-  MultiChoice = "multi-choice"
+  FreeForm = 'free-form',
+  MultiChoice = 'multi-choice',
+  Statement = 'statement'
 }
 
 export interface MultiChoiceQuestion {
   id: string;
-  type: "multi-choice";
+  type: 'multi-choice';
   text: string;
   answers: Answer[];
 }
@@ -18,7 +19,7 @@ export interface Answer {
 
 export interface FreeFormQuestion {
   id: string;
-  type: "free-form";
+  type: 'free-form' | 'statement';
   text: string;
   nextQuestionId?: string;
 }

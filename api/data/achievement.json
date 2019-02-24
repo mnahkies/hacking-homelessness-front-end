@@ -1,0 +1,31 @@
+[{
+	"id": "1",
+	"category": "Managing Money",
+	"points": 60.0,
+	"finish": false
+}, {
+	"id": "2",
+	"category": "Health and wellbeing",
+	"points": 160.0,
+	"finish": false
+}, {
+	"id": "3",
+	"category": "Life skills",
+	"points": 10.0,
+	"finish": false
+}, {
+	"id": "4",
+	"category": "Education and school",
+	"points": 20.0,
+	"finish": false
+}, {
+	"id": "5",
+	"category": "Getting a job",
+	"points": 10.0,
+	"finish": false
+}, {
+	"id": "6",
+	"category": "Housing and rent",
+	"points": 0.0,
+	"finish": false
+}]
