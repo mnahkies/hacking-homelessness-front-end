@@ -2,7 +2,7 @@
   Next steps:
 </h3>
 <div *ngFor="let task of tasks">
-  <div class="items">
+  <div class="items task" [ngClass]="task.borderStyle">
     <mat-icon *ngIf="task.done" style="color: green">check_circle</mat-icon>
     <mat-icon *ngIf="!task.done" style="color: gray">
       panorama_fish_eye
