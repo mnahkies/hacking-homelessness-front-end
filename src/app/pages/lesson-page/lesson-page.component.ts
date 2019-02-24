@@ -3,6 +3,7 @@ import {ConversationScript, ConversationScriptResult} from '../../interfaces';
 import {Subscription} from 'rxjs';
 import {Store} from '@ngxs/store';
 import {CoreState} from '../../state/core.state';
+import {IncreaseScore} from '../../state/core.actions';
 
 @Component({
   selector: 'app-lesson-page',
@@ -30,5 +31,6 @@ export class LessonPageComponent implements OnInit {
   onScriptCompleted(result: ConversationScriptResult) {
     console.info('conversation completed with result', result);
     // todo persist
+    this.store.dispatch(new IncreaseScore(20))
   };
 }

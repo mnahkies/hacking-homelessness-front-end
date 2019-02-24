@@ -17,8 +17,8 @@
 
     <span class="spacer"></span>
 
-    <a routerLink="achievements" class="achievements">
-      <img class="trophy" src="assets/images/trophy.svg" />
+    <a routerLink="achievements" class="achievements" *ngIf="points$ | async; let points">
+      <img class="trophy" src="assets/images/trophy.svg"/>
       <span class="points"> {{ points }} </span>
     </a>
   </mat-toolbar-row>

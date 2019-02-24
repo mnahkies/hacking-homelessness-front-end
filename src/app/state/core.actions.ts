@@ -6,3 +6,10 @@ export class SetOnboardingQuestions {
   constructor(readonly questions: Dictionary<Question>, readonly firstQuestionId: string) {
   }
 }
+
+export class IncreaseScore {
+  static readonly type = '[Core] Increase score';
+
+  constructor(readonly score: number) {
+  }
+}

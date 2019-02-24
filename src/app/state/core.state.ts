@@ -1,8 +1,9 @@
 import {Action, Selector, State, StateContext} from '@ngxs/store';
-import {SetOnboardingQuestions} from './core.actions';
+import {IncreaseScore, SetOnboardingQuestions} from './core.actions';
 import {ConversationScript} from '../interfaces';
 
 export class CoreStateModel {
+  score: number = 0;
   onboardingConversationScript?: ConversationScript;
 }
 
@@ -17,6 +18,11 @@ export class CoreState {
     return state.onboardingConversationScript;
   }
 
+  @Selector()
+  static getScore(state: CoreStateModel) {
+    return state.score;
+  }
+
   @Action(SetOnboardingQuestions)
   setOnboardingQuestions({patchState}: StateContext<CoreStateModel>, {questions, firstQuestionId}: SetOnboardingQuestions) {
     patchState({
@@ -24,6 +30,13 @@ export class CoreState {
         firstQuestionId,
         questions,
       },
+    });
+  }
+
+  @Action(IncreaseScore)
+  increaseScore({patchState, getState}: StateContext<CoreStateModel>, {score}: IncreaseScore) {
+    patchState({
+      score: getState().score + score,
     });
   }
 }

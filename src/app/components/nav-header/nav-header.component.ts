@@ -1,15 +1,17 @@
-import { Component, OnInit } from "@angular/core";
+import {Component} from '@angular/core';
+import {Store} from '@ngxs/store';
+import {CoreState} from '../../state/core.state';
+import {Observable} from 'rxjs';
 
 @Component({
-  selector: "app-nav-header",
-  templateUrl: "./nav-header.component.html",
-  styleUrls: ["./nav-header.component.scss"]
+  selector: 'app-nav-header',
+  templateUrl: './nav-header.component.html',
+  styleUrls: ['./nav-header.component.scss'],
 })
-export class NavHeaderComponent implements OnInit {
-  points: string = "0";
-  constructor() {}
+export class NavHeaderComponent {
+  points$: Observable<number>;
 
-  ngOnInit() {
-    this.points = "240";
+  constructor(store: Store) {
+    this.points$ = store.select(CoreState.getScore);
   }
 }
