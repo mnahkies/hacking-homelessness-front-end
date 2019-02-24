@@ -1,7 +1,10 @@
 .navbar {
-
   box-shadow: -1px 2px 20px 4px #999;
   height: 56px;
+}
+
+.achievements {
+  text-decoration: none;
 }
 
 .burger {
@@ -10,10 +13,10 @@
 
 .points {
   color: white;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 mat-toolbar {

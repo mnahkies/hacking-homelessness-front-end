@@ -1,11 +1,63 @@
+
+:host {
+  display: flex;
+}
+
 .lesson {
-  display: inline-block;
-  width: 200px;
-  height: 100px;
-  margin: 1em;
-  border-bottom: 1px solid red;
-  text-align: center;
-  padding-top: 15px;
-  background-color: lemonchiffon;
+  // background-image: linear-gradient(-227deg, #fff7d4 16%, #ffeda9 84%);
+  box-shadow: 0 2px 0 0 #19284a;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
+  border-radius: 8px;
+  padding-top: 80px;
+}
+
+.lessonName {
+  text-transform: uppercase;
+}
+
+.inner-lesson {
+  background-color: white;
+  height: 100%;
+  padding: 12px;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.continue-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  text-align: center;
+  background-color: #3aa3ff;
+  color: white;
+  font-size: 14px;
+  font-family: "Varela Round", sans-serif;
+  border-radius: 0 0 8px 8px;
+  padding: 5px 0;
+}
+
+.locked-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  text-align: center;
+  background-color: #3c4d72;
+  color: #99c1db;
+  font-size: 14px;
+  font-family: "Varela Round", sans-serif;
+  border-radius: 0 0 8px 8px;
+  padding: 5px 0;
+}
+
+.details {
+  font-family: "Varela Round", sans-serif;
+  color: #3c4d72;
+  font-size: 11px;
+  margin-bottom: 0;
 }

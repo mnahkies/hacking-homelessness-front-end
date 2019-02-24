@@ -1,14 +1,12 @@
-<mat-card>
-  <p>
-    Next steps:
-  </p>
-  <div *ngFor="let task of tasks">
-    <div class="items">
-      <mat-icon *ngIf="task.done" style="color: green">check_circle</mat-icon>
-      <mat-icon *ngIf="!task.done" style="color: gray">
-        check_circle_outline
-      </mat-icon>
-      {{ task.name }}
-    </div>
+<h3 style="margin-top: 0;" class="section-title">
+  Next steps:
+</h3>
+<div *ngFor="let task of tasks">
+  <div class="items task" [ngClass]="task.borderStyle">
+    <mat-icon *ngIf="task.done" style="color: green">check_circle</mat-icon>
+    <mat-icon *ngIf="!task.done" style="color: gray">
+      panorama_fish_eye
+    </mat-icon>
+    {{ task.name }}
   </div>
-</mat-card>
+</div>

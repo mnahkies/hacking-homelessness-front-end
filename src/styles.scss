@@ -49,27 +49,41 @@ $overline-color: #9e42d8;
 }
 
 .section-title {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   font-size: 21px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
+.financeLessonColor {
+  background-image: linear-gradient(-227deg, #fff7d4 16%, #ffeda9 84%);
+}
+
+.financeTaskColor {
+  border-color: #bdffc4 !important;
+}
+
+.careerLessonColor {
+  background-image: linear-gradient(-227deg, #fff7d4 16%, #726224 84%);
+}
+
+.careerTaskColor {
+  border-color: #d4f8fd !important;
+}
 
 .card-overline {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 11px;
   color: $overline-color;
   letter-spacing: 1.75px;
 }
 
 .card-title {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  color: #3C4D72;
+  color: #3c4d72;
 }
 
 .card-body {
-
 }
