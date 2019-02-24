@@ -56,19 +56,36 @@ $overline-color: #9e42d8;
 }
 
 .financeLessonColor {
-  background-image: linear-gradient(-227deg, #fff7d4 16%, #ffeda9 84%);
+  background-image: linear-gradient(238deg, #E9FEEB 24%, #B2FFB8 83%);
 }
 
 .financeTaskColor {
-  border-color: #bdffc4 !important;
+  border-color: #B2FFB8 !important;
 }
 
-.careerLessonColor {
-  background-image: linear-gradient(-227deg, #fff7d4 16%, #726224 84%);
+.lifeLessonColor {
+  background-image: linear-gradient(238deg, #FFE2E2 24%, #FFC0C0 83%);
 }
 
-.careerTaskColor {
-  border-color: #d4f8fd !important;
+.lifeTaskColor {
+  border-color: #FFC0C0 !important;
+}
+
+.healthTaskColor {
+  border-color: #FEE9FC;
+}
+
+.healthLessonColor {
+  background-image: linear-gradient(238deg, #FEE9FC 24%, #FCCFF8 83%);
+}
+
+.educationTaskColor {
+  border-color: #E9FEEB;
+}
+
+.educationLessonColor {
+  background-image: linear-gradient(238deg, #E9EAFE 24%, #96BFFF 83%);
+
 }
 
 .card-overline {
