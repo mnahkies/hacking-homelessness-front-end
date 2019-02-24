@@ -112,6 +112,12 @@ export class AppModule {
         'id': '15',
         'text': '- Having a new focus',
         'type': 'statement',
+        nextQuestionId: '16',
+      },
+      '16': {
+        id: '16',
+        text: 'Let\'s go to your dashboard to take your next step.',
+        type: 'statement',
       },
       '2': {
         'answers': [{
