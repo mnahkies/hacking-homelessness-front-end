@@ -55,4 +55,5 @@ export interface Lesson {
   uri: string;
   done: boolean;
   locked: boolean;
+  className: string;
 }

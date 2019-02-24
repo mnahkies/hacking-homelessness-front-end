@@ -17,9 +17,9 @@ $candy-app-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $candy-app-theme: mat-light-theme(
-    $candy-app-primary,
-    $candy-app-accent,
-    $candy-app-warn
+  $candy-app-primary,
+  $candy-app-accent,
+  $candy-app-warn
 );
 
 // Include theme styles for core and each component used in your app.
@@ -38,7 +38,7 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   //background-color: whitesmoke;
-  background-image: linear-gradient(-229deg, #942FBE 0%, #0B2752 100%);
+  background-image: linear-gradient(-229deg, #942fbe 0%, #0b2752 100%);
 }
 
 .spacer {
@@ -46,27 +46,33 @@ body {
 }
 
 .section-title {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   font-size: 21px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
+.financeLessonColor {
+  background-image: linear-gradient(-227deg, #fff7d4 16%, #ffeda9 84%);
+}
+
+.careerLessonColor {
+  background-image: linear-gradient(-227deg, #fff7d4 16%, #726224 84%);
+}
 
 .card-overline {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 11px;
-  color: #99C1DB;
+  color: #99c1db;
   letter-spacing: 1.75px;
 }
 
 .card-title {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  color: #3C4D72;
+  color: #3c4d72;
 }
 
 .card-body {
-
 }

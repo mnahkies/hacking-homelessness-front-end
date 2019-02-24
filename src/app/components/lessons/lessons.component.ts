@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Lesson } from "../../interfaces";
+import { getStyleForLessonType } from "src/app/getStyleForLessonType";
 
 @Component({
   selector: "app-lessons",
@@ -21,7 +22,8 @@ export class LessonsComponent implements OnInit {
         locked: false,
         done: false,
         header: "What is a bank account?",
-        details: "Here is an example of some text in a card."
+        details: "Here is an example of some text in a card.",
+        className: getStyleForLessonType("finance")
       },
       {
         name: "life skills",
@@ -31,7 +33,8 @@ export class LessonsComponent implements OnInit {
         locked: true,
         done: false,
         header: "Making pasta",
-        details: "Here is an example of some text in a card."
+        details: "Here is an example of some text in a card.",
+        className: getStyleForLessonType("career")
       },
       {
         name: "money",
@@ -41,7 +44,8 @@ export class LessonsComponent implements OnInit {
         locked: true,
         done: false,
         header: "What is a bank account?",
-        details: "Here is an example of some text in a card."
+        details: "Here is an example of some text in a card.",
+        className: getStyleForLessonType("finance")
       },
       {
         name: "life skills",
@@ -51,7 +55,8 @@ export class LessonsComponent implements OnInit {
         locked: true,
         done: false,
         header: "Making pasta",
-        details: "Here is an example of some text in a card."
+        details: "Here is an example of some text in a card.",
+        className: getStyleForLessonType("career")
       }
     ];
   }
