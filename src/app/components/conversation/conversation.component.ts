@@ -47,6 +47,9 @@ export class ConversationComponent implements OnInit {
 
   private currentQuestionId?: string;
 
+  @Input()
+  continueText: string = 'Take me there!';
+
   get currentQuestion(): any {
     let currentQuestionId = this.currentQuestionId;
 

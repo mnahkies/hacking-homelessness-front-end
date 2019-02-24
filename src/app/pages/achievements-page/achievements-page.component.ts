@@ -30,26 +30,8 @@ export class AchievementsPageComponent implements OnInit {
   achievementsColumns = ["category", "points"];
 
   streaks: Streak[] = [
-    {
-      headerColor: "streak-yellow",
-      title: "Topic Streak",
-      message: "3 topics done in a day!"
-    },
-    {
-      headerColor: "streak-peach",
-      title: "Daily Streak",
-      message: "Learning 3 days in a row"
-    }
-    // {
-    //   headerColor: "streak-yellow",
-    //   title: "Something Streak",
-    //   message: "10 somethings done in a day!"
-    // },
-    // {
-    //   headerColor: "streak-peach",
-    //   title: "Yearly Streak",
-    //   message: "Learning 2 years in a row"
-    // }
+    {headerColor: 'streak-yellow', title: 'Topic Streak', message: '3 topics done in a day!'},
+    {headerColor: 'streak-peach', title: 'Daily Streak', message: 'Learning 3 days in a row'},
   ];
 
   points: number = 0;

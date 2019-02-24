@@ -1,6 +1,7 @@
 <app-conversation *ngIf="conversationScript; else loading"
                   [conversationScript]="conversationScript"
                   continueLink="/home"
+                  continueText="Go to home"
                   (result)="onScriptCompleted($event)">
 </app-conversation>
 
