@@ -256,9 +256,14 @@ export class AppModule {
         'text': 'It will also save you time from going to visit a bank branch!',
         'type': 'statement'
       },
-      //TODO: Put this back to 13 after
-      '12': {'id': '12', 'nextQuestionId': '14', 'text': 'See what Alfonso uses his online banking for', 'type': 'statement'},
-      // '13': {'id': '13', 'nextQuestionId': '14', 'text': '', 'type': 'media'},
+      '12': {
+        'id': '12',
+        'type': 'link',
+        'url': 'do_not_render',
+        'text': 'See what Alfonso uses online banking for',
+        'previewImage': '../assets/images/Video.png',
+        'nextQuestionId': '14'
+      },
       '14': {
         'answers': [{'id': 'no', 'nextQuestionId': '20', 'text': 'Move on'}, {
           'id': 'yes',

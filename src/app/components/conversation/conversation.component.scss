@@ -24,6 +24,7 @@ $response-foreground-color: #FFFFFF;
 
 .left {
   justify-content: flex-start;
+  max-width: 80%;
 
   span {
     color: $question-foreground-color;
