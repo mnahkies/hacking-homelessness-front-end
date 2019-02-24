@@ -1,8 +1,3 @@
-.navbar {
-  box-shadow: -1px 2px 20px 4px #999;
-  height: 56px;
-}
-
 .achievements {
   text-decoration: none;
 }
@@ -23,4 +18,5 @@ mat-toolbar {
   background-color: #3c4d72;
   position: fixed;
   top: 0;
+  z-index: 100;
 }

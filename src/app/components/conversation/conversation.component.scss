@@ -71,6 +71,11 @@ $response-foreground-color: #FFFFFF;
   }
 }
 
+::ng-deep .mat-chip-list-wrapper {
+  justify-items: center;
+  justify-content: center;
+}
+
 .mat-chip.mat-standard-chip {
   color: #fff;
   background: #3AA3FF;

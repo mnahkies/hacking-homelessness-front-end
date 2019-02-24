@@ -3,6 +3,7 @@ import {ConversationScript, ConversationScriptResult} from '../../interfaces';
 import {Store} from '@ngxs/store';
 import {CoreState} from '../../state/core.state';
 import {Subscription} from 'rxjs';
+import {IncreaseScore} from '../../state/core.actions';
 
 @Component({
   selector: 'app-questionnaire-page',
@@ -31,6 +32,7 @@ export class OnboardingQuestionnairePageComponent implements OnInit, OnDestroy {
   onScriptCompleted(result: ConversationScriptResult) {
     console.info('conversation completed with result', result);
     // todo persist
+    this.store.dispatch(new IncreaseScore(10));
   };
 
 }

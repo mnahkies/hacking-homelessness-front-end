@@ -18,11 +18,11 @@ interface Streak {
 })
 export class AchievementsPageComponent implements OnInit {
   achievements: Achievement[] = [
-    {category: 'Managing Money', points: 60},
-    {category: 'Health and wellbeing', points: 160},
+    {category: 'Managing Money', points: 20},
+    {category: 'Health and wellbeing', points: 0},
     {category: 'Life skills', points: 10},
-    {category: 'Education and school', points: 20},
-    {category: 'Getting a job', points: 10},
+    {category: 'Education and school', points: 0},
+    {category: 'Getting a job', points: 0},
     {category: 'Housing and rent', points: 0},
   ];
   achievementsColumns = ['category', 'points'];
