@@ -1,7 +1,8 @@
 export enum QuestionType {
   FreeForm = 'free-form',
   MultiChoice = 'multi-choice',
-  Statement = 'statement'
+  Statement = 'statement',
+  Link = 'link'
 }
 
 export interface MultiChoiceQuestion {
@@ -24,7 +25,16 @@ export interface FreeFormQuestion {
   nextQuestionId?: string;
 }
 
-export type Question = FreeFormQuestion | MultiChoiceQuestion;
+export interface Link {
+  id: string
+  type: "link"
+  text: string
+  previewImage: string
+  url: string
+  nextQuestionId?: string
+}
+
+export type Question = FreeFormQuestion | MultiChoiceQuestion | Link;
 
 export type ConversationScript = {
   firstQuestionId: string;

@@ -129,8 +129,10 @@
   },
   {
     "id": "16",
-    "text": "https://www.moneyadviceservice.org.uk/en/articles/beginners-guide-to-online-banking#what-is-online-banking",
-    "type": "statement",
+    "text": "Online banking, or internet banking, has become increasingly popular but how does it work and is it safe?",
+    "url": "https://www.moneyadviceservice.org.uk/en/articles/beginners-guide-to-online-banking",
+    "previewImage": "https://mascdn.azureedge.net/frontend/a/MAS-logo_social-sharing-81e81c01d7ff9665b49321164faf4fb9.png",
+    "type": "link",
     "nextQuestionId": "17"
   },
   {
