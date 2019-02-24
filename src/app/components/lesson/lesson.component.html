@@ -10,9 +10,9 @@
   </div>
 
   <div *ngIf="!lesson.done && !lesson.locked" class="continue-status">
-    Continue
+    <span>Continue</span>
   </div>
   <div *ngIf="!lesson.done && lesson.locked" class="locked-status">
-    Locked
+    <span>Locked</span>
   </div>
 </div>

@@ -1,6 +1,13 @@
+
+:host {
+  display: flex;
+}
+
 .lesson {
   // background-image: linear-gradient(-227deg, #fff7d4 16%, #ffeda9 84%);
   box-shadow: 0 2px 0 0 #19284a;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
   border-radius: 8px;
   padding-top: 80px;
@@ -21,6 +28,10 @@
 }
 
 .continue-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
   text-align: center;
   background-color: #3aa3ff;
   color: white;
@@ -31,6 +42,10 @@
 }
 
 .locked-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
   text-align: center;
   background-color: #3c4d72;
   color: #99c1db;
@@ -44,4 +59,5 @@
   font-family: "Varela Round", sans-serif;
   color: #3c4d72;
   font-size: 11px;
+  margin-bottom: 0;
 }
