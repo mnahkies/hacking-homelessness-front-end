@@ -7,6 +7,13 @@ export class SetOnboardingQuestions {
   }
 }
 
+export class SetFinanceLesson {
+  static readonly type = '[Core] Set finance questions';
+
+  constructor(readonly questions: Dictionary<Question>, readonly firstQuestionId: string) {
+  }
+}
+
 export class IncreaseScore {
   static readonly type = '[Core] Increase score';
 

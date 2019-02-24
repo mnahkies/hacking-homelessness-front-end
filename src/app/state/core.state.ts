@@ -1,10 +1,11 @@
 import {Action, Selector, State, StateContext} from '@ngxs/store';
-import {IncreaseScore, SetOnboardingQuestions} from './core.actions';
+import {IncreaseScore, SetOnboardingQuestions, SetFinanceLesson} from './core.actions';
 import {ConversationScript} from '../interfaces';
 
 export class CoreStateModel {
   score: number = 0;
   onboardingConversationScript?: ConversationScript;
+  financelessonConversationScript?: ConversationScript;
 }
 
 @State<CoreStateModel>({
@@ -23,10 +24,26 @@ export class CoreState {
     return state.score;
   }
 
+  @Selector()
+  static getFinanceLessonConversationScript(state: CoreStateModel) {
+    return state.financelessonConversationScript;
+  }
+
+
   @Action(SetOnboardingQuestions)
   setOnboardingQuestions({patchState}: StateContext<CoreStateModel>, {questions, firstQuestionId}: SetOnboardingQuestions) {
     patchState({
       onboardingConversationScript: {
+        firstQuestionId,
+        questions,
+      },
+    });
+  }
+
+  @Action(SetFinanceLesson)
+  setFinanceLessonQuestions({patchState}: StateContext<CoreStateModel>, {questions, firstQuestionId}: SetFinanceLesson) {
+    patchState({
+      financelessonConversationScript: {
         firstQuestionId,
         questions,
       },
