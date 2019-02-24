@@ -1,11 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output,
-  ViewChild
-} from "@angular/core";
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {
   Answer,
   ConversationScript,
@@ -13,12 +6,12 @@ import {
   FreeFormQuestion,
   MultiChoiceQuestion,
   Question,
-  QuestionType
-} from "../../interfaces";
+  QuestionType,
+} from '../../interfaces';
 
 interface Message {
   content: string;
-  position: "left" | "right";
+  position: 'left' | 'right';
 }
 
 interface LinkMessage extends Message {
@@ -27,21 +20,21 @@ interface LinkMessage extends Message {
 }
 
 @Component({
-  selector: "app-conversation",
-  templateUrl: "./conversation.component.html",
-  styleUrls: ["./conversation.component.scss"]
+  selector: 'app-conversation',
+  templateUrl: './conversation.component.html',
+  styleUrls: ['./conversation.component.scss'],
 })
 export class ConversationComponent implements OnInit {
   @Input() conversationScript!: ConversationScript;
   answers: { [questionId: string]: string } = {};
 
   @Input()
-  continueLink: string = "/pointsgained";
+  continueLink: string = '/pointsgained';
 
   @Output()
   result = new EventEmitter<ConversationScriptResult>();
 
-  @ViewChild(".scroll-anchor") scrollAnchor!: HTMLBRElement;
+  @ViewChild('.scroll-anchor') scrollAnchor!: HTMLBRElement;
 
   readonly history: (Message | LinkMessage)[] = [];
 
@@ -82,7 +75,7 @@ export class ConversationComponent implements OnInit {
 
   submitResponse(
     responseInput: HTMLTextAreaElement,
-    question: FreeFormQuestion
+    question: FreeFormQuestion,
   ) {
     let response = responseInput.value;
 
@@ -90,7 +83,7 @@ export class ConversationComponent implements OnInit {
       return;
     }
 
-    responseInput.value = "";
+    responseInput.value = '';
 
     this.answers[question.id] = response;
     this.addResponseToHistory(response);
@@ -116,13 +109,13 @@ export class ConversationComponent implements OnInit {
     } else {
       this.result.emit({
         history: this.history,
-        answers: this.answers
+        answers: this.answers,
       });
     }
 
-    setTimeout(function() {
+    setTimeout(function () {
       let inp: HTMLInputElement | null = document.querySelector(
-        "input[name='response']"
+        'input[name=\'response\']',
       );
 
       if (inp) {
@@ -135,14 +128,14 @@ export class ConversationComponent implements OnInit {
     if (question.type === QuestionType.Link) {
       this.history.push({
         content: question.text,
-        position: "left",
+        position: 'left',
         url: question.url,
-        previewImage: question.previewImage
+        previewImage: question.previewImage,
       });
     } else {
       this.history.push({
         content: question.text,
-        position: "left"
+        position: 'left',
       });
     }
   }
@@ -150,7 +143,7 @@ export class ConversationComponent implements OnInit {
   private addResponseToHistory(response: string) {
     this.history.push({
       content: response,
-      position: "right"
+      position: 'right',
     });
   }
 
