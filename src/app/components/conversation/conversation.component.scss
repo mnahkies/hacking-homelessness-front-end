@@ -3,6 +3,20 @@ $question-foreground-color: #3C4D72;
 $response-background-color: #368CDD;
 $response-foreground-color: #FFFFFF;
 
+//*
+
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+//*
+
 .message {
   display: flex;
   flex-direction: row;
@@ -14,6 +28,11 @@ $response-foreground-color: #FFFFFF;
 
   font-size: 14px;
   line-height: 24px;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
 }
 
 .message span {
@@ -83,4 +102,9 @@ $response-foreground-color: #FFFFFF;
   box-shadow: 0 2px 0 0 #19284A;
   border-radius: 8px;
   border-radius: 8px;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
 }
