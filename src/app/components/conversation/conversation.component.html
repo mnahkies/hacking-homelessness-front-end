@@ -1,54 +1,54 @@
-<div class="conversation-history">
-  <div *ngFor="let message of history" class="message" [ngClass]="message.position">
-    <span>{{message.content}}</span>
-  </div>
-  <br>
-</div>
-
 <div class="bottom-tray">
-  <ng-container *ngIf="currentQuestion; else continueButton">
-    <div class="response-input" style="display: flex" *ngIf="currentAnswers.length; else freeFormInput">
-      <span style="flex: 1 1"></span>
 
+  <div class="conversation-history">
+    <div *ngFor="let message of history" class="message" [ngClass]="message.position">
+      <span>{{message.content}}</span>
+    </div>
+    <br class="scroll-anchor">
+  </div>
+
+  <div class="actual-bottom-tray">
+    <ng-container *ngIf="currentQuestion; else continueButton">
+      <div class="response-input" style="display: flex" *ngIf="currentAnswers.length; else freeFormInput">
+        <span style="flex: 1 1"></span>
+
+        <mat-chip-list>
+
+          <mat-chip *ngFor="let answer of currentAnswers"
+                    (click)="selectAnswer(answer, currentQuestion)">
+            {{answer.text}}
+          </mat-chip>
+
+        </mat-chip-list>
+
+        <span style="flex: 1 1"></span>
+      </div>
+
+      <ng-template #freeFormInput>
+        <form #responseForm="ngForm"
+              *ngIf="currentQuestion.type === 'free-form'"
+              (ngSubmit)="submitResponse(responseInput, currentQuestion)">
+          <div class="response-input">
+
+            <input #responseInput type="text"
+                   cdkFocusInitial
+                   name="response"
+                   (keydown.enter)="responseForm.ngSubmit.emit(); $event.preventDefault()"
+                   [disabled]="!!currentAnswers.length"/>
+          </div>
+        </form>
+      </ng-template>
+
+    </ng-container>
+
+    <ng-template #continueButton>
       <mat-chip-list>
 
-        <mat-chip *ngFor="let answer of currentAnswers"
-                  (click)="selectAnswer(answer, currentQuestion)">
-          {{answer.text}}
+        <mat-chip [routerLink]="continueLink" color="primary">
+          Take me there!
         </mat-chip>
 
       </mat-chip-list>
-
-      <span style="flex: 1 1"></span>
-    </div>
-
-    <ng-template #freeFormInput>
-      <form #responseForm="ngForm"
-            (ngSubmit)="submitResponse(responseInput, currentQuestion)">
-        <div class="response-input">
-          <mat-form-field>
-    <textarea #responseInput
-              [disabled]="!!currentAnswers.length"
-              cdkTextareaAutosize
-              cdkFocusInitial
-              (keydown.enter)="responseForm.ngSubmit.emit(); $event.preventDefault()"
-              matInput name="response"></textarea>
-          </mat-form-field>
-        </div>
-      </form>
     </ng-template>
-
-  </ng-container>
-
-  <ng-template #continueButton>
-    <div>
-      <button mat-button class="mat-raised-button">
-        Continue
-      </button>
-      <span class="spacer"></span>
-      <button mat-button class="mat-raised-button" (click)="reset()">
-        Reset
-      </button>
-    </div>
-  </ng-template>
+  </div>
 </div>

@@ -1,22 +1,21 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ConversationScript, ConversationScriptResult} from '../../interfaces';
+import {Subscription} from 'rxjs';
 import {Store} from '@ngxs/store';
 import {CoreState} from '../../state/core.state';
-import {Subscription} from 'rxjs';
 
 @Component({
-  selector: 'app-questionnaire-page',
-  templateUrl: './onboarding-questionnaire-page.component.html',
-  styleUrls: ['./onboarding-questionnaire-page.component.scss'],
+  selector: 'app-lesson-page',
+  templateUrl: './lesson-page.component.html',
+  styleUrls: ['./lesson-page.component.scss'],
 })
-export class OnboardingQuestionnairePageComponent implements OnInit, OnDestroy {
+export class LessonPageComponent implements OnInit {
 
   conversationScript?: ConversationScript;
 
   private subscription = Subscription.EMPTY;
 
   constructor(readonly store: Store) {
-
   }
 
   ngOnInit() {
@@ -32,6 +31,4 @@ export class OnboardingQuestionnairePageComponent implements OnInit, OnDestroy {
     console.info('conversation completed with result', result);
     // todo persist
   };
-
 }
-

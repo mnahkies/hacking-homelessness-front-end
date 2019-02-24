@@ -1,3 +1,4 @@
+$overline-color: #9e42d8;
 
 .table-wrapper {
   border-radius: 8px;
@@ -14,7 +15,7 @@ th {
   font-family: 'Rubik', sans-serif;
   font-weight: 800;
   font-size: 11px;
-  color: #99C1DB;
+  color: $overline-color;
   letter-spacing: 1.75px;
 }
 
@@ -23,12 +24,12 @@ tr:nth-child(odd) {
 }
 
 .streak-yellow {
-  background-image: linear-gradient(-227deg, #FFF7D4 16%, #FFEDA9 84%);
+  background-image: linear-gradient(225deg, #FFF7D4 16%, #FFEDA9 84%);
   box-shadow: 0 2px 0 0 #19284A;
 }
 
 .streak-peach {
-  background-image: linear-gradient(-225deg, #FFE6D4 15%, #FFC8A9 85%);
+  background-image: linear-gradient(225deg, #FFE6D4 15%, #FFC8A9 85%);
   box-shadow: 0 2px 0 0 #19284A;
 }
 

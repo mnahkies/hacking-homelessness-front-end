@@ -6,7 +6,7 @@ import {AchievementsPageComponent} from './pages/achievements-page/achievements-
 
 const routes: Routes = [
   {
-    path: 'onboarding/questionnaire',
+    path: '',
     component: OnboardingQuestionnairePageComponent,
   },
   {
@@ -14,7 +14,7 @@ const routes: Routes = [
     component: AchievementsPageComponent,
   },
   {
-    path: '',
+    path: 'home',
     component: HomePageComponent,
   },
 ];
